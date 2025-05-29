@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+main {  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr;
+  grid-template-rows: 0.8fr 1.2fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "profile-money profile-money profile-money"
+    "utility-area shops-1 shops-2"
+    "utility-area shops-1 shops-2";
+}
+
+.utility-area { grid-area: utility-area; }
+
+.shops-1 { grid-area: shops-1; }
+
+.shops-2 { grid-area: shops-2; }
+
+.profile-money { grid-area: profile-money; }
