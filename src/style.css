@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import '@fontsource/silkscreen';
+body {
+  font-family: 'Silkscreen', system-ui;
+}
 
 main {  display: grid;
   grid-template-columns: 0.7fr 1fr 1fr;
@@ -18,3 +22,7 @@ main {  display: grid;
 .shops-2 { grid-area: shops-2; }
 
 .profile-money { grid-area: profile-money; }
+
+.utility-buttons {
+  @apply text-2xl block bg-gray-300 mb-5 rounded-sm p-4 w-80 text-start cursor-pointer ml-4
+}
