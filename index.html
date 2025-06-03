@@ -45,59 +45,89 @@
         </button>
       </div>
       <div class="shops-1">
-        <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2" onclick="firstBuyStone()" id="first-buy-stone">
+          <div>Buy Stone Shop</div>
+          <div>10 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5" id="stone-ui">
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
+            onclick="clickingStone()"
           >
             <img
               src="/src/images/stone.png"
               alt="image of stone bricks in mineraft"
               class="w-14 ml-3"
             />
-            <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+            <div
+              class="bg-amber-200 rounded-3xl w-20 text-center"
+              id="stone-shops"
+            >
+              1
+            </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
-              class="bg-blue-400 pl-2 w-50 text-start text-white text-md rounded-xl cursor-pointer"
+              class="bg-blue-400 pl-2 w-50 text-start text-white text-md rounded-xl cursor-pointer flex justify-between"
+              onclick="buyStoneShop()"
             >
-              Buy <br />
-              <span class="text-sm">x</span>1
+              <div>
+                Buy <br />
+                <span class="text-sm">x</span>1
+              </div>
+              <div class="flex flex-col items-center">
+                <div>10</div>
+                <div>diamonds</div>
+              </div>
             </button>
           </div>
         </div>
         <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
+            onclick="clickingPotato()"
           >
             <img
               src="/src/images/potato.png"
               alt="image of potato in mineraft"
               class="w-14 ml-3"
             />
-            <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+            <div
+              class="bg-amber-200 rounded-3xl w-20 text-center"
+              id="potato-shops"
+            >
+              0
+            </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
-              class="bg-blue-400 pl-2 w-50 text-start text-white text-md rounded-xl cursor-pointer"
+              class="bg-blue-400 pl-2 w-50 text-start text-white text-md rounded-xl cursor-pointer flex justify-between"
+              onclick="buyPotatoShop()"
             >
-              Buy <br />
-              <span class="text-sm">x</span>1
+              <div>
+                Buy <br />
+                <span class="text-sm">x</span>1
+              </div>
+              <div class="flex flex-col items-center">
+                <div>100</div>
+                <div>diamonds</div>
+              </div>
             </button>
           </div>
         </div>
         <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
             <img
               src="/src/images/sand image.png"
-              alt="image of stone bricks in mineraft"
+              alt="image of sands in mineraft"
               class="w-14 ml-3"
             />
             <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
@@ -109,16 +139,16 @@
           </div>
         </div>
         <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
             <img
               src="/src/images/gunpowder.png"
-              alt="image of stone bricks in mineraft"
+              alt="image of gunpowder in mineraft"
               class="w-14 ml-3"
             />
             <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
@@ -130,16 +160,16 @@
           </div>
         </div>
         <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
             <img
               src="/src/images/iron ingot.png"
-              alt="image of stone bricks in mineraft"
+              alt="image of iron ingot in mineraft"
               class="w-14 ml-3"
             />
             <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
@@ -154,16 +184,16 @@
 
       <div class="shops-2">
         <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
             <img
               src="/src/images/fireworks image.png"
-              alt="image of stone bricks in mineraft"
+              alt="image of fireworks in mineraft"
               class="w-14 ml-3"
             />
             <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
@@ -175,16 +205,16 @@
           </div>
         </div>
         <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
             <img
               src="/src/images/gold ingot.png"
-              alt="image of stone bricks in mineraft"
+              alt="image of gold ingot in mineraft"
               class="w-14 ml-3"
             />
             <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
@@ -196,8 +226,8 @@
           </div>
         </div>
         <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
             <img
               src="/src/images/enchanted book.png"
@@ -205,7 +235,7 @@
               class="w-14 ml-3"
             />
             <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
@@ -217,8 +247,8 @@
           </div>
         </div>
         <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
             <img
               src="/src/images/oak wood.png"
@@ -226,7 +256,7 @@
               class="w-14 ml-3"
             />
             <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
@@ -238,8 +268,8 @@
           </div>
         </div>
         <div class="flex items-center mb-5">
-          <div
-            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500"
+          <button
+            class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
             <img
               src="/src/images/elytra.png"
@@ -247,7 +277,7 @@
               class="w-14 ml-3"
             />
             <div class="bg-amber-200 rounded-3xl w-20 text-center">1</div>
-          </div>
+          </button>
           <div>
             <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
             <button
@@ -267,12 +297,16 @@
             class="w-50"
           />
         </button>
+        <button class="cursor-pointer active:rotate-2" onclick="changePoint(1)">
+          <img src="/src/images/pickaxe.png" alt="image of pickaxe" class="w-30">
+        </button>
         <button class="flex h-15 items-center">
           <img src="/src/images/diamond.png" alt="diamond image" class="w-15" />
-          <div class="text-4xl">1</div>
+          <div class="text-4xl" id="diamonds"></div>
         </button>
+        
       </div>
     </main>
-    <script type="module" src="/src/main.js"></script>
+    <script src="/src/main.js"></script>
   </body>
 </html>
