@@ -45,14 +45,15 @@
         </button>
       </div>
       <div class="shops-1">
-        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2" onclick="firstBuyStone()" id="first-buy-stone">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyStone()" id="first-buy-stone">
           <div>Buy Stone Shop</div>
           <div>10 diamonds</div>
         </button>
+        
         <div class="hidden items-center mb-5" id="stone-ui">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
-            onclick="clickingStone()"
+            onclick="bigClick()"
           >
             <img
               src="/src/images/stone.png"
@@ -77,16 +78,20 @@
                 <span class="text-sm">x</span>1
               </div>
               <div class="flex flex-col items-center">
-                <div>10</div>
+                <div id="cost-stone">10</div>
                 <div>diamonds</div>
               </div>
             </button>
           </div>
         </div>
-        <div class="flex items-center mb-5">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyPotato()" id="first-buy-potato">
+          <div>Buy Potato Shop</div>
+          <div>100 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5" id="potato-ui">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
-            onclick="clickingPotato()"
+            onclick="bigClick()"
           >
             <img
               src="/src/images/potato.png"
@@ -97,7 +102,7 @@
               class="bg-amber-200 rounded-3xl w-20 text-center"
               id="potato-shops"
             >
-              0
+              1
             </div>
           </button>
           <div>
@@ -117,7 +122,11 @@
             </button>
           </div>
         </div>
-        <div class="flex items-center mb-5">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyPotato()" id="first-buy-potato">
+          <div>Buy Sand Shop</div>
+          <div>1000 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >

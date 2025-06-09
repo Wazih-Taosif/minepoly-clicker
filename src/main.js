@@ -1,52 +1,51 @@
 let points = 0
 let stoneShops = 0
 let potatoShops = 0
+let costStoneShop = 10
+
 
 //clicking on pickaxe
 function changePoint(amount) {
     points = points + amount
-    document.getElementById("diamonds").innerText = points
+    document.getElementById("diamonds").innerText = points.toFixed(2)
 }
+
 //first time purchases..................
 
-//stoneshop
+//stoneshop first buy
 function firstBuyStone() {
     if (points >= 10) {
         document.getElementById("first-buy-stone").style.display = "none"
     document.getElementById("stone-ui").style.display = "flex"
     stoneShops = stoneShops + 1
-    }
-}
-
-
-
-//clicking on stone shop
-function clickingStone() {
-    if (stoneShops > 0) {
-        points = points + 1
-        document.getElementById("diamonds").innerText = points
+    changePoint(-10)
     } else {
-        alert("No shops purchased")
+        alert("Not enough diamonds")
     }
 }
-
-//clicking on potato shop
-function clickingPotato() {
-    if (potatoShops > 0) {
-    points = points + 10
-    document.getElementById("diamonds").innerText = points
+function firstBuyPotato() {
+    if (points >= 100) {
+        document.getElementById("first-buy-potato").style.display = "none"
+        document.getElementById("potato-ui").style.display = "flex"
+        potatoShops = potatoShops + 1
+        changePoint(-100)
     } else {
-        alert("No shops purchased")
+        alert("Not enough diamonds")
     }
-    
 }
 
-//purchasing stone shop
+
+
+
+//buying stone shops
 function buyStoneShop() {
-    if (points >= 10) {
-        changePoint(-10)
+    if (points >= costStoneShop) {
+        changePoint( - costStoneShop)
         stoneShops = stoneShops + 1
         document.getElementById("stone-shops").innerText = stoneShops
+        costStoneShop = stoneShops ** 2
+        console.log(stoneShops)
+        console.log(costStoneShop)
     } 
     else {
         alert("Not enough diamonds")
@@ -63,3 +62,14 @@ function buyPotatoShop() {
         alert("Not enough diamonds")
     }
 }
+
+// incremented increase of diamonds per stone shops owned
+function bigClick() {
+    let basePoint = stoneShops ** 0.15
+    changePoint(basePoint)
+}
+function clickingPotato() {
+    let base = potatoShops ** 0.25 
+    changePoint(base)
+}
+
