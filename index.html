@@ -44,9 +44,9 @@
           Cosmetics
         </button>
       </div>
-      <div class="shops-1">
+      <div class="shops-1 ml-10">
         <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyStone()" id="first-buy-stone">
-          <div>Buy Stone Shop</div>
+          <div class="w-70">Buy Stone Shop</div>
           <div>10 diamonds</div>
         </button>
         
@@ -68,7 +68,7 @@
             </div>
           </button>
           <div>
-            <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
+            <div class="bg-lime-300 p-2 text-center rounded-xl" id="profit-stone">1</div>
             <button
               class="bg-blue-400 pl-2 w-50 text-start text-white text-md rounded-xl cursor-pointer flex justify-between"
               onclick="buyStoneShop()"
@@ -85,7 +85,7 @@
           </div>
         </div>
         <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyPotato()" id="first-buy-potato">
-          <div>Buy Potato Shop</div>
+          <div class="w-70">Buy Potato Shop</div>
           <div>100 diamonds</div>
         </button>
         <div class="hidden items-center mb-5" id="potato-ui">
@@ -122,8 +122,8 @@
             </button>
           </div>
         </div>
-        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyPotato()" id="first-buy-potato">
-          <div>Buy Sand Shop</div>
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuySand()" id="first-buy-sand">
+          <div class="w-70">Buy Sand Shop</div>
           <div>1000 diamonds</div>
         </button>
         <div class="hidden items-center mb-5">
@@ -147,7 +147,11 @@
             </button>
           </div>
         </div>
-        <div class="flex items-center mb-5">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyGunpowder()" id="first-buy-gunpowder">
+          <div class="w-70">Buy Gunpowder Shop</div>
+          <div>1000 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
@@ -168,7 +172,11 @@
             </button>
           </div>
         </div>
-        <div class="flex items-center mb-5">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyIron()" id="first-buy-iron">
+          <div class="w-70">Buy Iron Shop</div>
+          <div>1000 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
@@ -192,7 +200,11 @@
       </div>
 
       <div class="shops-2">
-        <div class="flex items-center mb-5">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyFireworks()" id="first-buy-fireworks">
+          <div class="w-70">Buy Fireworks Shop</div>
+          <div>1000 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
@@ -213,7 +225,11 @@
             </button>
           </div>
         </div>
-        <div class="flex items-center mb-5">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyGold()" id="first-buy-gold">
+          <div class="w-70">Buy Gold Shop</div>
+          <div>1000 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
@@ -234,7 +250,11 @@
             </button>
           </div>
         </div>
-        <div class="flex items-center mb-5">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyBook()" id="first-buy-book">
+          <div class="w-70">Buy Enchanted Books Shop</div>
+          <div>1000 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
@@ -255,7 +275,11 @@
             </button>
           </div>
         </div>
-        <div class="flex items-center mb-5">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyWood()" id="first-buy-wood">
+          <div class="w-70">Buy Wood Shop</div>
+          <div>1000 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
@@ -276,7 +300,11 @@
             </button>
           </div>
         </div>
-        <div class="flex items-center mb-5">
+        <button class="bg-blue-500 p-5 text-white rounded-xl mb-5 ml-2 block" onclick="firstBuyElytra()" id="first-buy-elytra">
+          <div class="w-70">Buy Elytra Shop</div>
+          <div>1000 diamonds</div>
+        </button>
+        <div class="hidden items-center mb-5">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
           >
@@ -307,7 +335,7 @@
           />
         </button>
         <button class="cursor-pointer active:rotate-2" onclick="changePoint(1)">
-          <img src="/src/images/pickaxe.png" alt="image of pickaxe" class="w-30">
+          <img src="/src/images/pickaxe.png" alt="image of pickaxe" class="w-37">
         </button>
         <button class="flex h-15 items-center">
           <img src="/src/images/diamond.png" alt="diamond image" class="w-15" />
