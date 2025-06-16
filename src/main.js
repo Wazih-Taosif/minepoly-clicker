@@ -1,8 +1,12 @@
 let points = 0
+
 let stoneShops = 0
-let potatoShops = 0
 let costStoneShop = 10
 let profitStone = document.getElementById("profit-stone")
+
+let potatoShops = 0
+let costPotatoShop = 100
+let profitPotato = document.getElementById("profit-potato")
 
 //clicking on pickaxe
 function changePoint(amount) {
@@ -10,8 +14,7 @@ function changePoint(amount) {
     document.getElementById("diamonds").innerText = points.toFixed(2)
 }
 
-//first time purchases.............................................................................
-
+//Stone shops stuffs.............................................................................
 //stoneshop first buy
 function firstBuyStone() {
     if (points >= 10) {
@@ -23,22 +26,6 @@ function firstBuyStone() {
         alert("Not enough diamonds")
     }
 }
-//potato shop first buy
-function firstBuyPotato() {
-    if (points >= 100) {
-        document.getElementById("first-buy-potato").style.display = "none"
-        document.getElementById("potato-ui").style.display = "flex"
-        potatoShops = potatoShops + 1
-        changePoint(-100)
-    } else {
-        alert("Not enough diamonds")
-    }
-}
-
-
-
-//Repitedely buying shops.........................................................................
-
 //buying stone shops
 function buyStoneShop() {
     if (points >= costStoneShop) {
@@ -54,26 +41,44 @@ function buyStoneShop() {
         alert("Not enough diamonds")
     }
 }
-
-//buying potato shops
-function buyPotatoShop() {
-    if (points >= 100) {
-        changePoint(-100)
-        potatoShops += 1
-        document.getElementById("potato-shops").innerText = potatoShops
-    } else {
-        alert("Not enough diamonds")
-    }
-}
-
 // incremented increase of diamonds per stone shops owned
-function bigClick() {
+function clickStone() {
     basePoint = stoneShops ** 0.4
     changePoint(basePoint)
     profitStone.innerHTML = basePoint.toFixed(2)
 }
-function clickingPotato() {
-    let base = potatoShops ** 0.25 
-    changePoint(base)
+
+//Potato shops stuffs............................................................................
+//potato shop first buy
+function firstBuyPotato() {
+    if (points >= 100) {
+        document.getElementById("first-buy-potato").style.display = "none"
+        document.getElementById("potato-ui").style.display = "flex"
+        potatoShops = potatoShops + 1
+        changePoint(-100)
+    } else {
+        alert("Not enough diamonds")
+    }
 }
+//buying potato shops
+function buyPotatoShop() {
+    if (points >= costPotatoShop) {
+        changePoint( - costPotatoShop)
+        potatoShops = potatoShops + 1
+        document.getElementById("potato-shops").innerText = potatoShops
+        costPotatoShop = potatoShops ** 2 + 100
+        console.log(potatoShops)
+        console.log(costPotatoShop)
+        document.getElementById("cost-potato").innerHTML = costPotatoShop.toFixed(2)
+    }
+}
+
+
+
+
+
+
+
+
+
 

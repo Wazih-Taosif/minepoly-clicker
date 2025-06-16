@@ -53,7 +53,7 @@
         <div class="hidden items-center mb-5" id="stone-ui">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
-            onclick="bigClick()"
+            onclick="clickStone()"
           >
             <img
               src="/src/images/stone.png"
@@ -91,7 +91,7 @@
         <div class="hidden items-center mb-5" id="potato-ui">
           <button
             class="bg-cyan-300 rounded-4xl w-22 h-20 border-solid border-3 border-gray-500 cursor-pointer"
-            onclick="bigClick()"
+            onclick="clickPotato()"
           >
             <img
               src="/src/images/potato.png"
@@ -106,7 +106,7 @@
             </div>
           </button>
           <div>
-            <div class="bg-lime-300 p-2 text-center rounded-xl">1</div>
+            <div class="bg-lime-300 p-2 text-center rounded-xl" id="profit-potato">1</div>
             <button
               class="bg-blue-400 pl-2 w-50 text-start text-white text-md rounded-xl cursor-pointer flex justify-between"
               onclick="buyPotatoShop()"
@@ -116,7 +116,7 @@
                 <span class="text-sm">x</span>1
               </div>
               <div class="flex flex-col items-center">
-                <div>100</div>
+                <div id="cost-potato">100</div>
                 <div>diamonds</div>
               </div>
             </button>
